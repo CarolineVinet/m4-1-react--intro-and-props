@@ -5,7 +5,13 @@ import "./ChatMessage.css";
 const ChatMessage = (props) => {
   console.log(props);
   return (
-    <div className="chat-message">
+    <div
+      className={
+        props.message.user.username === props.user.username
+          ? "userMessage"
+          : "chat-message"
+      }
+    >
       <img className="avatar" alt="user" src={props.message.user.avatar}></img>
       <div className="textDiv">
         <p className="user">{props.message.user.username}</p>

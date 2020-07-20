@@ -27,3 +27,22 @@
 .user {
   margin-bottom: 2px;
 }
+
+.userMessage {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-right: 600px;
+}
+
+.userMessage .message {
+  background-color: rgb(96, 170, 240);
+}
+
+.userMessage .user {
+  display: none;
+}
+
+.userMessage .avatar {
+  display: none;
+}

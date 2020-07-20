@@ -11,11 +11,10 @@ import "./ChatStream.css";
 // - a background color of #e9e9eb
 
 const ChatStream = (props) => {
-  console.log(props);
   return (
     <section className="chat-stream">
       {props.messages.map((message) => {
-        return <ChatMessage message={message} />;
+        return <ChatMessage message={message} user={props.user} />;
       })}
     </section>
   );
