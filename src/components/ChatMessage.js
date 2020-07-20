@@ -1,5 +1,5 @@
 import React from "react";
-
+import Avatar from "./Avatar";
 import "./ChatMessage.css";
 
 const ChatMessage = (props) => {
@@ -12,7 +12,7 @@ const ChatMessage = (props) => {
           : "chat-message"
       }
     >
-      <img className="avatar" alt="user" src={props.message.user.avatar}></img>
+      <Avatar src={props.message.user.avatar}></Avatar>
       <div className="textDiv">
         <p className="user">{props.message.user.username}</p>
         <p className="message">{props.message.body}</p>
