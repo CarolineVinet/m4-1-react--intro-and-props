@@ -1,5 +1,5 @@
 import React from "react";
-
+import ChatMessage from "./ChatMessage.js";
 import "./ChatStream.css";
 
 // The current user's messages should have:
@@ -14,9 +14,9 @@ const ChatStream = (props) => {
   console.log(props);
   return (
     <section className="chat-stream">
-      {props.messages.map((message) => (
-        <p>{message.body}</p>
-      ))}
+      {props.messages.map((message) => {
+        return <ChatMessage message={message} />;
+      })}
     </section>
   );
 };
